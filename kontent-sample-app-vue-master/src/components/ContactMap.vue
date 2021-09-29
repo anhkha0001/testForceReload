@@ -86,10 +86,7 @@ export default {
     }
   },
   mounted: function () {
-    this.map = this.$refs.map.mapObject;
-    this.$refs.map.$mapCreated.then(() => {
-      this.mapLoaded = true
-    })
+
   },
 }
 </script>
