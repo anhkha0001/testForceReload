@@ -61,18 +61,15 @@ export default {
     connn: ''
   }),
   created() {
-      this.clll();
-      this.connn = this.content1 + 'AK1';
+    this.clll();
+    this.connn = this.content1 + 'AK1';
   },
   methods: {
     clll() {
-        /* eslint-disable no-console */
-    console.log('===========');
-
-/* eslint-enable no-console */
-
-
-      }
+      /* eslint-disable no-console */
+      console.log('===========');
+      /* eslint-enable no-console */
+    }
   }
 }
 </script>
