@@ -133,7 +133,7 @@ export default {
     }
   },
   created() {
-    this.connn = this.content1 + 'AK1222';
+    this.connn = this.content1 + 'AK===';
   },
   mounted: function() {
     CafeStore.subscribe();
