@@ -2,7 +2,7 @@
     <div class="container">
         <h2>{{$t('Cafes.ourCafesTitle')}}</h2>
         <div class="row">
-            <h1>{{connn}}</h1>
+            <h1 class="txt-color">{{connn}}</h1>
             <div
                 v-for="(ourCafe, index) in ourCafesData"
                 class="col-md-6"

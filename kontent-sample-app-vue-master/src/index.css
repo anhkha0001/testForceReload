@@ -1,3 +1,6 @@
+.txt-color {
+  color: red !important;
+}
 @font-face {
     font-family: 'PT Serif';
     font-style: normal;

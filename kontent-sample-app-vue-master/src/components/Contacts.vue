@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="col-md-12">
-            <h1>{{connn}}</h1>
+            <h1 class="txt-color">{{connn}}</h1>
             <h2 class="contact-title">{{$t('Contacts.roasteryTitle')}}</h2>
             <ul
                 v-if="firstCafe"
