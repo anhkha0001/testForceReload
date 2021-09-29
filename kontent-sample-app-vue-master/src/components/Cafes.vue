@@ -89,7 +89,7 @@ export default {
     }
   },
   created() {
-    this.connn = this.content1 + 'AK6';
+    this.connn = this.content1 + 'AK7';
   },
   methods: {
     getModel: function(cafe) {
