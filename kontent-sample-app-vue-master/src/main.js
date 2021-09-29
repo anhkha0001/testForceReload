@@ -41,7 +41,7 @@ Vue.use(VueScrollTo, {
 });
 
 let router = new Router({
-  mode: 'history',
+  //mode: 'history',
   routes: [
     {
       path: projectConfigurationPath,
