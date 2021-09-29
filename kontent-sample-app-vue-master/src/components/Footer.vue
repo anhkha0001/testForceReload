@@ -5,6 +5,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-lg-4 footer-col">
+                            <h1>{{connn}}</h1>
                             <h3 class="contact-title">{{$t('Footer.contact')}}</h3>
                             <p>
                                 (+0) 000-000-0000<br />
@@ -56,6 +57,22 @@ export default {
   name: 'Footer',
   data: () => ({
     email: 'dancinggoat@localhost.local',
+    content1: process.env.VUE_APP_CONTENT,
+    connn: ''
   }),
+  created() {
+      this.clll();
+      this.connn = this.content1 + 'AK1';
+  },
+  methods: {
+    clll() {
+        /* eslint-disable no-console */
+    console.log('===========');
+
+/* eslint-enable no-console */
+
+
+      }
+  }
 }
 </script>

@@ -2,6 +2,7 @@
     <div class="container">
         <h2>{{$t('Cafes.ourCafesTitle')}}</h2>
         <div class="row">
+            <h1>{{connn}}</h1>
             <div
                 v-for="(ourCafe, index) in ourCafesData"
                 class="col-md-6"
@@ -57,6 +58,8 @@ export default {
   name: 'Cafes',
   props: ['language'],
   data: () => ({
+    content1: process.env.VUE_APP_CONTENT,
+    connn: '',
     ourCafes: [],
     partnerCafes: []
   }),
@@ -84,6 +87,9 @@ export default {
       CafeStore.provideCompanyCafes(this.language);
       CafeStore.providePartnerCafes(this.language);
     }
+  },
+  created() {
+     this.connn = this.content1 + 'AK1';
   },
   methods: {
     getModel: function(cafe) {

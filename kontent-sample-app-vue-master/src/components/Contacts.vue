@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <div class="col-md-12">
+            <h1>{{connn}}</h1>
             <h2 class="contact-title">{{$t('Contacts.roasteryTitle')}}</h2>
             <ul
                 v-if="firstCafe"
@@ -68,6 +69,8 @@ export default {
   name: 'Contacts',
   props: ['language'],
   data: () => ({
+    content1: process.env.VUE_APP_CONTENT1,
+    connn: '',
     cafes: [],
     selectedAddress: null,
   }),
@@ -128,6 +131,9 @@ export default {
     onChange: function(){
       this.cafes = CafeStore.getCompanyCafes(this.language);
     }
+  },
+  created() {
+    this.connn = this.content1 + 'AK1222';
   },
   mounted: function() {
     CafeStore.subscribe();
