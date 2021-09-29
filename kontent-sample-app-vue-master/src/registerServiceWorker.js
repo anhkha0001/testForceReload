@@ -39,7 +39,7 @@ if (process.env.NODE_ENV === 'production') {
         console.log('EEEEE');
       }
       if (refreshing) return
-      alert('Change')
+      alert('Change1')
       window.location.href = '/'
       window.location.reload()
       refreshing = true
