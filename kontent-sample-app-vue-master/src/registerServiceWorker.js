@@ -19,10 +19,10 @@ if (process.env.NODE_ENV === 'production') {
     updatefound () {
       console.log('New content is downloading.')
     },
-    updated () {
+    updated (registration) {
       let confirmationResult = confirm('New content found! Do you want to reload the app?')
-      //if (confirmationResult) registration.waiting.postMessage({action: 'skipWaiting'})
-      if (confirmationResult) window.location.reload()
+      if (confirmationResult) registration.waiting.postMessage({action: 'skipWaiting'})
+      //if (confirmationResult) window.location.reload()
     },
     offline () {
       console.log('No internet connection found. App is running in offline mode.')
@@ -33,13 +33,16 @@ if (process.env.NODE_ENV === 'production') {
   })
 
   let refreshing
-  navigator.serviceWorker.addEventListener('controllerchange', e=>{
-    if(e != null) {
-      console.log('EEEEE');
-    }
-    if (refreshing) return
-    alert('Change')
-    window.location.reload()
-    refreshing = true
-  })
+  if(navigator.serviceWorker) {
+    navigator.serviceWorker.addEventListener('controllerchange', e=>{
+      if(e != null) {
+        console.log('EEEEE');
+      }
+      if (refreshing) return
+      alert('Change')
+      window.location.href = '/'
+      window.location.reload()
+      refreshing = true
+    })
+  }
 }
