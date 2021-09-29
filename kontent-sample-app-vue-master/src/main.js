@@ -25,6 +25,7 @@ import es from './Localization/es-ES.json'
 
 import './index.css';
 import './components/Admin/Admin.css';
+import './registerServiceWorker'
 
 Vue.config.productionTip = false;
 Vue.use(VueGoogleMaps, {
